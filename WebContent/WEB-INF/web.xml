@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>Day38_empmgr</display-name>
-  
   <welcome-file-list>
-    <welcome-file>EmpCheckCookie.do</welcome-file>  
+    <welcome-file>EmpCheckCookie.do</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <servlet-name>EmpListServlet</servlet-name>
     <servlet-class>com.lxq.web.emp.servlet.control.EmpListServlet</servlet-class>
@@ -46,54 +44,29 @@
     <servlet-name>EmpUpdateServlet</servlet-name>
     <url-pattern>/EmptoUpdate.do</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-  	<servlet-name>EmpLoginServlet</servlet-name>
-  	<servlet-class>com.lxq.web.emp.servlet.control.EmpLoginServlet</servlet-class>
+    <servlet-name>EmpLoginServlet</servlet-name>
+    <servlet-class>com.lxq.web.emp.servlet.control.EmpLoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>EmpLoginServlet</servlet-name>
-  	<url-pattern>/EmpLoginServlet.do</url-pattern>
+    <servlet-name>EmpLoginServlet</servlet-name>
+    <url-pattern>/EmpLoginServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EmpCheckCookie</servlet-name>
+    <servlet-class>com.lxq.web.emp.servlet.control.EmpCheckCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmpCheckCookie</servlet-name>
+    <url-pattern>/EmpCheckCookie.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EmpExitServlet</servlet-name>
+    <servlet-class>com.lxq.web.emp.servlet.control.EmpExitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmpExitServlet</servlet-name>
+    <url-pattern>/EmpExitServlet.do</url-pattern>
   </servlet-mapping>
   
-  <servlet>
-  	<servlet-name>EmpCheckCookie</servlet-name>
-  	<servlet-class>com.lxq.web.emp.servlet.control.EmpCheckCookie</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>EmpCheckCookie</servlet-name>
-  	<url-pattern>/EmpCheckCookie.do</url-pattern>
-  </servlet-mapping>
-  
-  <!-- 去除session -->
-  <servlet>
-  	<servlet-name>EmpExitServlet</servlet-name>
-  	<servlet-class>com.lxq.web.emp.servlet.control.EmpExitServlet</servlet-class>
-  	
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>EmpExitServlet</servlet-name>
-  	<url-pattern>/EmpExitServlet.do</url-pattern>
-  </servlet-mapping>
-  
-  <!--list View 层  -->
-  <servlet>
-  	<servlet-name>EmpListViewServlet</servlet-name>
-  	<servlet-class>com.lxq.web.emp.servlet.view.EmpListViewServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>EmpListViewServlet</servlet-name>
-  	<url-pattern>/EmpListViewServlet.do</url-pattern>
-  </servlet-mapping>
- 
-  <!-- 更新view -->
-  <servlet>
-  	<servlet-name>toUpdatePageView</servlet-name>
-  	<servlet-class>com.lxq.web.emp.servlet.view.toUpdatePageView</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>toUpdatePageView</servlet-name>
-  	<url-pattern>/toUpdatePageView.do</url-pattern>
-  </servlet-mapping>
- 
 </web-app>

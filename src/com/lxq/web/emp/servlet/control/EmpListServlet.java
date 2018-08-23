@@ -58,7 +58,7 @@ public class EmpListServlet extends HttpServlet {
 			String username=(String) session.getAttribute("username");
 			if(username!=null) {
 				//服务器内部跳转
-				req.getRequestDispatcher("EmpListViewServlet.do").forward(req, resp);
+				req.getRequestDispatcher("list.jsp").forward(req, resp);
 			}else{
 				resp.setContentType("text/html;charset=utf-8");
 				PrintWriter out=resp.getWriter();

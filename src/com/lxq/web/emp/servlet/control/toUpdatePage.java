@@ -55,7 +55,7 @@ public class toUpdatePage extends HttpServlet {
 			HttpSession session=req.getSession();
 			String username=(String) session.getAttribute("username");
 			if(username!=null) {				
-				req.getRequestDispatcher("toUpdatePageView.do").forward(req, resp);
+				req.getRequestDispatcher("toUpdate.jsp").forward(req, resp);
 			}else {
 				resp.setContentType("text/html;charset=utf-8");
 				PrintWriter ou=resp.getWriter();
