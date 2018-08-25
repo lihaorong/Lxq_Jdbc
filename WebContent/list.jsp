@@ -25,16 +25,18 @@
 			<td>部门编号</td>
 			<td>操作</td>
 		</tr>
-	<% for(Emp e:eList){ %>	
+	<% for(Emp e:eList){ 
+		pageContext.setAttribute("emp", e);		
+	%>		
 		<tr>
-			<td><%=e.getEmpno() %></td>
-			<td><%=e.getEname() %></td>
-			<td><%=e.getJob() %></td>
-			<td><%=e.getMgr() %></td>
-			<td><%=e.getHiredate() %></td>
-			<td><%=e.getSal() %></td>
-			<td><%=e.getComm() %></td>
-			<td><%=e.getDeptno() %></td>
+			<td>${emp.empno}</td>
+			<td>${emp.ename}</td>
+			<td>${emp.job}</td>
+			<td>${emp.mgr}</td>
+			<td>${emp.hiredate}</td>
+			<td>${emp.sal}</td>
+			<td>${emp.comm}</td>
+			<td>${emp.deptno}</td>
 			<td>
 				<a href="del.do?empno=<%=e.getEmpno() %>">删除</a>
 				&nbsp;&nbsp;&nbsp;
@@ -44,7 +46,7 @@
 		<%} %> 
 	</table>
 
-	<a href="add.html">添加</a><br>
+	<a href="add.jsp">添加</a><br>
 	<a href="EmpExitServlet.do">退出系统</a>
 </body>
 </html>

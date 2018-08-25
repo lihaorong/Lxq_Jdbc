@@ -68,5 +68,4 @@
     <servlet-name>EmpExitServlet</servlet-name>
     <url-pattern>/EmpExitServlet.do</url-pattern>
   </servlet-mapping>
-  
 </web-app>
